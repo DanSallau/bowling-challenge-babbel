@@ -1,8 +1,8 @@
 import React, { PureComponent, PropTypes } from 'react';
-import {store} from '../_store/basicStore';
 import Frames from './Frames';
 import Pins from './Pins';
 import ScoreBoard from './ScoreBoard';
+import GameBoard from './GameBoard';
 import {
    setCurrentPlayer,
    addPlayer,
@@ -16,35 +16,42 @@ import {
 } from '../_actions';
 
 export default class Bowling extends PureComponent {
-    constructor() {
-        this.state = {
+    constructor(props) {
+        super(props);
+        this.state =  {
             player_name: '',
             game_name: '',
-        }
+        };
+    }    
+    onPlayerTextBoxChanged(e){ 
+        this.setState({player_name: e.target.value});
     }
-    
-    onPlayerTextBoxChanged = e => this.setState({player_name: e.target.value});
 
-    onGameTextBoxChanged = e => this.setState({game_name: e.target.value});
+    onGameTextBoxChanged(e){
+        this.setState({game_name: e.target.value});
+    }
 
-    addPlayer = () => {
+    addPlayer(){
         const player = this.state.player_name;
-        store.dispatch(addPlayer(player));
+        const {dispatch} = this.props;
+        dispatch(addPlayer(player));
         this.setState({player_name: ''});
     }
-    addGame = () => {
+    addGame() {
         const game = this.state.player_name;
-        store.dispatch(addGame(game));
+        const {dispatch} = this.props;
+        dispatch(addGame(game));
         this.setState({game_name: ''});
     }
     render() {
-        const { games } = this.props;
+        const { bowling } = this.props;
+
         return(
             <div className="main">
-                <Frames frames={store.getState().frames.frames} />
-                <Pins pins={store.getState().rolls.rolls.find(x => x.isCurrentRole===true).score} />
-                <ScoreBoard players ={store.getState().players.players} />
-                <GameBoard players ={store.getState().games.games} />
+                <Frames frames={bowling.frames.frames} />
+                <Pins rolls={bowling.rolls.rolls} />
+                <ScoreBoard players ={bowling.players.players} />
+                <GameBoard players ={bowling.games.games} />
                 <div className="txt_AddPlayer">
                     <input type="text" placeholder="add pslayer" onChange={this.onPlayerTextBoxChanged} />
                 </div>
@@ -52,4 +59,8 @@ export default class Bowling extends PureComponent {
             </div>
         );
     }
+}
+Bowling.propTypes = {
+    bowling: PropTypes.object,
+    dispatch: PropTypes.func,
 }

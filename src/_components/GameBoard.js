@@ -2,17 +2,13 @@ import React, { PureComponent, PropTypes } from 'react';
 
 
 export default class GameBoard extends PureComponent {
-    
-    static propTypes = {
-        games = PropTypes.array
-    };
 
     render() {
         const { games } = this.props;
         return(
             <div className="game-board">
-            {
-                players.map(obj => {
+            { games &&
+                games.map(obj => {
                     obj.isCurrentGame ?
                         <div className="current-board">
                             Total Players : { obj.players} 
@@ -26,3 +22,7 @@ export default class GameBoard extends PureComponent {
         );
     }
 }
+
+GameBoard.propTypes = {
+    games : PropTypes.array
+};

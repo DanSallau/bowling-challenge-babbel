@@ -1,4 +1,4 @@
-import { SET_TOTAL_PLAYERS } from '../_constants/ActionTypes';
+import { ADD_GAME,SET_CURRENT_GAME } from '../_constants/ActionTypes';
 const initialState = {
     games:[]
 };

@@ -15,10 +15,10 @@ module.exports = {
             {
                 loader: 'babel',
                 test: /\.js$/,
-                include: [path.resolve(__dirname, 'src', 'js')],
+                include: [path.resolve(__dirname, 'src')],
                 query: {
                     plugins: ['transform-runtime'],
-                    presets: ['es2015']
+                    presets: ['es2015', 'react']
                 }
             },
             {

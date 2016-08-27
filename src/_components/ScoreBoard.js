@@ -2,10 +2,6 @@ import React, { PureComponent, PropTypes } from 'react';
 
 
 export default class ScoreBoard extends PureComponent {
-    
-    static propTypes = {
-        players = PropTypes.array
-    };
 
     render() {
         const { players } = this.props;
@@ -22,4 +18,7 @@ export default class ScoreBoard extends PureComponent {
             </div>
         );
     }
+}
+ScoreBoard.propTypes = {
+    players : PropTypes.array
 }

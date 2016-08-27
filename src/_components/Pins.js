@@ -2,13 +2,11 @@ import React, { PureComponent, PropTypes } from 'react';
 
 
 export default class Pins extends PureComponent {
-    
-    static propTypes = {
-        score = PropTypes.number
-    };
 
     render() {
-        const { score } = this.props;
+        const { rolls } = this.props;
+        const roll = rolls.find(x => x.isCurrentRole===true);
+        const score = roll ? roll.score : 10;
         const remainingPins = 10 - score;
         return(
             <div className="pins">
@@ -21,3 +19,7 @@ export default class Pins extends PureComponent {
         );
     }
 }
+
+Pins.propTypes = {
+    rolls : PropTypes.array
+};

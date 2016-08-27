@@ -1,11 +1,6 @@
-export {
-   setCurrentPlayer,
-   addPlayer,
-   setFrameIndex,
-   setPlayerScore,
-   setHasStrike,
-   setHasSpare,
-   setCurrentRoll,
-   setCurrentGame,
-   addGame
-} from './TodoActions';
+
+export {setCurrentRoll} from './RollAction';
+export {addGame, setCurrentGame} from './GameAction';
+export {setFrameIndex} from './FramesAction';
+export {  addPlayer, setPlayerScore,setHasStrike,setHasSpare,setCurrentPlayer} from './PlayerAction'
+
