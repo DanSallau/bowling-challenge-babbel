@@ -12,11 +12,11 @@
 
 ## Structure ##
 Below is project proposed Structure
--src
---_actions
---_reducers
---_constants
---_components
---_root
---_store
---lib 
+*-src
+*--_actions
+*--_reducers
+*--_constants
+*--_components
+*--_root
+*--_store
+*--lib 
