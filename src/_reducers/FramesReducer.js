@@ -4,52 +4,42 @@ const initialState = {
     frames:[
         {
             id: 0,
-            player:'',
             isCurrentFrame: false,
         },
         {
             id: 1,
-            player:'',
             isCurrentFrame: false,
         },
         {
             id: 2,
-            player:'',
             isCurrentFrame: false,
         },
         {
             id: 3,
-            player:'',
             isCurrentFrame: false,
         },
         {
             id: 4,
-            player:'',
             isCurrentFrame: false,
         },
         {
             id: 5,
-            player:'',
             isCurrentFrame: false,
         },
         {
             id: 6,
-            player:'',
             isCurrentFrame: false,
         },
         {
             id: 7,
-            player:'',
             isCurrentFrame: false,
         },
         {
             id: 8,
-            player:'',
             isCurrentFrame: false,
         },
         {
             id: 9,
-            player:'',
             isCurrentFrame: false,
         }
     ]
