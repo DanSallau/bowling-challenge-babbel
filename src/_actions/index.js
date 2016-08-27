@@ -1,7 +1,11 @@
 export {
-    setFrameIndex, 
-    setNumberOfPlayers, 
-    setCurrentPlayer, 
-    setPlayerScore, 
-    setTotalPins
+   setCurrentPlayer,
+   addPlayer,
+   setFrameIndex,
+   setPlayerScore,
+   setHasStrike,
+   setHasSpare,
+   setCurrentRoll,
+   setCurrentGame,
+   addGame
 } from './TodoActions';

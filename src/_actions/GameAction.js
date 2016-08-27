@@ -1,6 +1,6 @@
 import * as types from '../_constants/ActionTypes';
 
-export const SET_CURRENT_GAME = id => ({
+export const setCurrentGame = id => ({
     type: types.SET_CURRENT_GAME,
 });
 

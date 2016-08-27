@@ -17,7 +17,7 @@ export default(state = initialState, change) => {
                 players: change.players,
                 isCurrentGame: false,
             })
-            return state;
+            return
         }
         default:
             return state;
