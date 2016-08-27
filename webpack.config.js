@@ -4,7 +4,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: ['babel-polyfill', path.normalize(__dirname + '/src/js/main')],
+    entry: ['babel-polyfill', path.normalize(__dirname + '/src/_root/main')],
     devtool: 'cheap-module-source-map',
     output: {
         filename: 'bundle.js',
@@ -24,7 +24,7 @@ module.exports = {
             {
                 loader: 'style!css',
                 test: /\.css$/,
-                include: [path.resolve(__dirname, 'src', 'css')]
+                include: [path.resolve(__dirname, 'public', 'css')]
             }
         ]
     }
