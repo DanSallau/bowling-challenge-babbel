@@ -1,7 +1,6 @@
 import * as types from '../_constants/ActionTypes';
 
-export const setTotalPins = pins => ({
-    type: types.SET_TOTAL_PINS,
+export const SET_CURRENT_ROLL = id => ({
+    type: types.SET_CURRENT_ROLL,
     id,
-    pins
 });

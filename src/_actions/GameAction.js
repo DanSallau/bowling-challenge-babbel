@@ -1,11 +1,10 @@
 import * as types from '../_constants/ActionTypes';
 
-export const setNumberOfPlayers = id => ({
-    type: types.SET_TOTAL_PLAYERS,
-    id
+export const SET_CURRENT_GAME = id => ({
+    type: types.SET_CURRENT_GAME,
 });
 
-export const setCurrentPlayer = name => ({
-    type: types.SET_TOTAL_PLAYERS,
-    name
+export const addGame = players => ({
+    type: types.ADD_GAME,
+    players
 });
