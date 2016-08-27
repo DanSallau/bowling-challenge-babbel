@@ -1,4 +1,4 @@
-import { combineReducers } from 'react-redux';
+import { combineReducers } from 'redux';
 import rolls from './RollReducer';
 import players from './PlayerReducer';
 import games from './GameReducer';
